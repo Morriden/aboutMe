@@ -20,7 +20,7 @@ function launchQuiz() {
     name = firstName;
 
     const lastName = prompt("what's your last name?");
-    name = name + '' + lastName;
+    name = name + ' ' + lastName;
 
     const geraltWitcher = prompt('Is Geralt of Rivia a Witcher (Yes/No)?');
 
@@ -43,12 +43,21 @@ function launchQuiz() {
     let response = 'Your name is ' + name;
 
     if (correctAnswers >= 3) {
-        response += ' and you have been listening to my tales!';
+        response += ' you have been listening to my tales! You got all 3 questions correct!';
     } else {
-        response += ' Tsk tsk I see you havent been listening...';
+        response += ' it looks like you only got ' + correctAnswers + '/3. You should listen to my stories more closely!';
     }
 
     result.textContent = response;
+    let scoreStyle = document.getElementById('score-style');
+    if (correctAnswers >= 1) {
+        scoreStyle.style.color = 'green';
+    } else {
+        scoreStyle.style.color = 'red';
+    }
+    
 }
+
+
 
 actionButton.addEventListener('click', launchQuiz);
