@@ -14,8 +14,6 @@ function launchQuiz() {
         return;
     }
 
-    const emptyString = '';    //why do i need this?
-
     const firstName = prompt("What's your first name?");
     name = firstName;
 
@@ -49,11 +47,10 @@ function launchQuiz() {
     }
 
     result.textContent = response;
-    let scoreStyle = document.getElementById('score-style');
     if (correctAnswers >= 1) {
-        scoreStyle.style.color = 'green';
+        result.style.color = 'gold';
     } else {
-        scoreStyle.style.color = 'red';
+        result.style.color = 'red';
     }
     
 }
