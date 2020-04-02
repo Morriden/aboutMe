@@ -1,0 +1,36 @@
+body {
+    background-color: darkolivegreen;
+}
+
+h1 {
+    font-family: fantasy;
+    font-size: 2em;
+    color: goldenrod
+}
+
+h3 {
+    font-family: fantasy;
+    font-size: 1.5em;
+    color: goldenrod
+}
+
+.ul1 {
+    list-style-type: decimal;
+}
+
+li {
+    color: silver;
+}
+
+p {
+    color: silver;
+}
+
+#red {
+    color:red;
+}
+
+#gold {
+    color:gold;
+}
+
